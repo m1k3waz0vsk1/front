@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'http://localhost:4444',
-//    baseURL: 'mongodb+srv://admin:Twchy1cydalT$@cluster0.wtg5v1a.mongodb.net/mern?retryWrites=true&w=majority',
+    baseURL: process.env.REACT_APP_API_URL,
 });
 
 instance.interceptors.request.use((config) => {
